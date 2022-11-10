@@ -1,0 +1,357 @@
+
+.wrapper {
+	overflow: hidden;
+	position: relative;
+	min-height: 100%;
+}
+[class*="__container"]{
+   width: 1500px;
+}
+.main {
+}
+
+.animation__container {
+   width: 100%;
+   margin: 0 auto;
+   
+}
+.animation__content {
+   background: url("../img/fon.jpg") 0 0 / 100% no-repeat;
+   width: 1500px;
+   height: 750px;
+   margin: 0 auto;
+ 
+  
+}
+.animation__items {
+   max-width: 100%;
+   position: relative;
+   top: 350px;
+   left: 100px;
+}
+.animation__items img{
+   width: 100%;
+   
+}
+
+.items__tank1 {
+   width: 200px;
+   height: 300px;
+   position: absolute;
+   top: 200px;
+   left: 40px;
+   animation: tank1 10.8s forwards,tank1-back 10s forwards 18s;
+   z-index: 5;
+}
+
+.items__tank1::after{
+   content: "";
+   width: 20px;
+   height: 20px;
+   display: inline-block;
+   position: absolute;
+   top: 40px;
+   left: 100px;
+   background: linear-gradient(to top, #CF112A 13%, #6333FF 50%, #CFC9C7 73%);
+}
+.items__shell {
+   width: 100px;
+   height: 100px;
+   position: relative;
+   bottom: 90px;
+   left: 40px;
+   visibility: hidden;
+   opacity: 0;
+   transform: rotate(30deg);
+   animation: shell 2s forwards linear 25s;
+
+}
+.items__shell::after{
+   content: "";
+   background: url("../img/explosion.png") 0 0 / 100% no-repeat;
+   width: 150px;
+   height: 150px;
+   display: inline-block;
+   position: relative;
+   bottom: 83px;
+   left: -20px;
+   visibility: hidden;
+   opacity: 0;
+   animation: explosion 0.5s forwards 26.9s; 
+
+}
+@keyframes shell{
+   0%{
+      visibility: visible;
+      opacity: 1;
+      transform:translate(0px );
+   }
+   100%{
+      visibility: visible;
+      opacity: 1;
+      transform:translate(-450px, -50px);
+   }
+}
+@keyframes explosion{
+   0%{
+      visibility: hidden;
+      opacity: 0;
+   }
+   100%{
+      visibility: visible;
+      opacity: 1;
+   }
+}
+.items__tank1::before{
+   content: "поехали на заправку";
+   text-align: center;
+   padding: 5px;
+   border-radius: 40px 40px 40px 0px;
+   background: blanchedalmond;  
+   display: inline-block;
+   position: absolute;
+   bottom: 300px;
+   left: 100px;
+   visibility: hidden;
+   opacity: 0;
+   animation:dialogue2 8s 6s;
+}
+
+@keyframes tank1{
+   0% {
+      transform:translate(1000px);
+   }
+   20%{
+      transform:translate(0px);
+   }
+   80%{
+      transform:translate(0px);
+   }
+   100%{
+      transform: translate(-1000px);
+   } 
+   
+}
+@keyframes tank1-back{
+   0% {
+      transform:translate(1500px);
+   }
+  
+   100%{
+      transform: translate(700px, 100px);
+   } 
+   
+}
+@keyframes dialogue2{
+   0%{
+      visibility: visible;
+      opacity: 1;
+
+   }
+   100%{
+      visibility: hidden;
+      opacity: 0;
+   }
+}
+.items__tank2 {
+   width: 200px;
+   height: 300px;
+   position: absolute;
+   left: 240px;
+   top: 200px;
+   animation: tank2 2.8s;
+}
+.items__tank2::after{
+   content: "";
+   width: 20px;
+   height: 20px;
+   display: inline-block;
+   position: absolute;
+   top: 80px;
+   left: 100px;
+   background: linear-gradient(to top, #CF112A 13%, #6333FF 50%, #CFC9C7 73%);
+   animation: flag 5s forwards 12.8s; 
+}
+@keyframes tank2{
+   0% {
+      transform:translate(1000px);
+   }
+   100% {
+      transform: translate(0px);
+   }
+}
+@keyframes flag{
+   0%{
+      background: linear-gradient(to top, #CF112A 13%, #6333FF 50%, #CFC9C7 73%);
+   }
+   100%{
+      background: linear-gradient(to top, #CFCF00 51%, #1735CF 45%);
+   }
+}
+.items__tank3 {
+   width: 200px;
+   height: 300px;
+   position: absolute;
+   left: 440px;
+   top: 200px;
+   z-index: 2;
+   animation: tank3 2.8s;
+}
+.items__tank3::after{
+   content: "";
+   width: 20px;
+   height: 20px;
+   display: inline-block;
+   position: absolute;
+   top: 80px;
+   left: 100px;
+   background: linear-gradient(to top, #CF112A 13%, #6333FF 50%, #CFC9C7 73%);
+   animation: flag 5s forwards 11.8s; 
+   
+}
+@keyframes tank3{
+   0% {
+      transform:translate(1000px);
+   }
+   100% {
+      transform: translate(0px);
+   }
+}
+@keyframes flag{
+   0%{
+      background: linear-gradient(to top, #CF112A 13%, #6333FF 50%, #CFC9C7 73%);
+   }
+   100%{
+      background: linear-gradient(to top, #CFCF00 51%, #1735CF 45%);
+   }
+}
+.items__tank4 {
+   width: 200px;
+   height: 300px;
+   position: absolute;
+   left: 620px;
+   top: 200px;
+	animation: tank4 10.8s forwards,tank4-back 10s forwards 17s;
+   z-index: 5;
+}
+
+.items__tank4::after{
+   content: "";
+   width: 20px;
+   height: 20px;
+   display: inline-block;
+   position: absolute;
+   top: 40px;
+   left: 100px;
+   background: linear-gradient(to top, #CF112A 13%, #6333FF 50%, #CFC9C7 73%);
+}
+.items__tank4::before{
+   content: "закончилось топливо";
+   text-align: center;
+   padding: 10px;
+   padding: 5px;
+   border-radius: 40px 40px 40px 0px;
+   background: blanchedalmond;  
+   display: inline-block;
+   position: absolute;
+   bottom: 300px;
+   left: 100px;
+   visibility: hidden;
+   opacity: 0;
+   animation:dialogue 8s 4s;
+}
+
+.shell-tank4 {
+   animation: shell-tank4 2s forwards linear 25s;
+}
+
+@keyframes tank4{
+   0% {
+      transform:translate(1000px);
+   }
+   20%{
+      transform:translate(0px);
+   }
+   80%{
+      transform:translate(0px);
+   }
+   100%{
+      transform: translate(-1000px);
+   } 
+   
+}
+@keyframes tank4-back{
+   0% {
+      transform:translate(1000px);
+   }
+  
+   100%{
+      transform: translate(200px);
+   } 
+   
+}
+@keyframes dialogue{
+   0%{
+      visibility: visible;
+      opacity: 1;
+
+   }
+   100%{
+      visibility: hidden;
+      opacity: 0;
+   }
+}
+@keyframes  shell-tank4{
+   0%{
+      visibility: visible;
+      opacity: 1;
+      transform:translate(0px );
+   }
+   100%{
+      visibility: visible;
+      opacity: 1;
+      transform:translate(-350px, 50px);
+   }
+}
+.img__evgen {
+   width: 200px;
+   height: 200px;
+   position: absolute;
+   top: 25px;
+   left: 400px;
+   z-index: 3;
+   visibility: hidden;
+   opacity: 0;
+   animation: evgen 10s;
+   Animation-delay: 10.8s
+}
+@keyframes evgen{
+   0%{  
+      
+      transform: translate(0px);
+   }
+   20%{
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-10px, 200px);
+   }
+   30%{
+      transform: translate(150px, 200px);
+   }
+   40%{
+      visibility: visible;
+      opacity: 1;
+      transform: translate(-150px, 200px);
+   }
+   60%{
+      visibility: visible;
+      opacity: 1;
+      transform: translate(-10px, 200px);
+   }
+   100%{
+      visibility: hidden;
+      opacity: 0;
+      transform: translate(0px);
+   }
+
+}
